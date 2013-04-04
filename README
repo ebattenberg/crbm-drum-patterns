@@ -1,0 +1,39 @@
+This package is meant to be used for training a Conditional Restricted Boltzmann machine
+to generate drum patterns.  
+
+Example training and generation scripts are: crbm_train.py and crbm_gen.py
+
+
+Requirements:
+
+    * CUDA
+    * CUDAMat
+    * python-midi 
+
+Included:
+
+    * Gnumpy
+    * npmat
+
+
+Obtaining and Installing the above:
+
+* CUDA can be downloaded from: https://developer.nvidia.com/cuda-downloads
+    please note that a CUDA-capable Nvidia GPU is required
+* CUDAMat
+    checkout:
+        hg clone https://code.google.com/p/cudamat/
+
+    install:
+        cd cudamat
+        # for mac: add '-m 64' to nvcc lines in Makefile
+        make
+        export PYTHONPATH=$PYTHONPATH:`pwd`
+
+    test:
+        python test_cudamat.py
+* python-midi
+    git clone https://github.com/ebattenberg/python-midi.git
+    cd python-midi
+    python setup.py install
+

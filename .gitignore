@@ -1,0 +1,9 @@
+.DS_Store
+*.pyc
+*.png
+*.tar.gz
+*.swp
+cudamat
+python-midi
+*.pkl
+
