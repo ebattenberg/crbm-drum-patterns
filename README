@@ -12,8 +12,8 @@ Requirements:
 
 Included:
 
-    * Gnumpy
-    * npmat
+    * Gnumpy: http://www.cs.toronto.edu/~tijmen/gnumpy.html
+    * npmat: http://www.cs.toronto.edu/~ilya/npmat.py
 
 
 Obtaining and Installing the above:
