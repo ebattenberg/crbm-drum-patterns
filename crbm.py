@@ -912,8 +912,10 @@ class CRBM(object):
             mean =  log_1_plus_exp(x) - log_1_plus_exp(x-self.vis_scale)
             noise = stddev * gp.randn(x.shape)
             samples = mean + noise
-            samples[samples < 0] = 0
-            samples[samples > self.vis_scale] = self.vis_scale
+            samples *= samples > 0
+            samples_over = samples - self.vis_scale
+            samples_over *= samples_over > 0
+            samples_over -= samples_over
             return samples, mean
 
     def cdk(self,K,v_input,rate=0.001,momentum=0.0,weight_decay=0.001,noisy=0):
